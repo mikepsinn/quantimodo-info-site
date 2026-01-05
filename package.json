@@ -8,7 +8,9 @@
     "build": "eleventy",
     "serve": "eleventy --serve",
     "fix-entities": "node scripts/fix-html-entities.js",
-    "fix-entities:dry-run": "node scripts/fix-html-entities.js --dry-run"
+    "fix-entities:dry-run": "node scripts/fix-html-entities.js --dry-run",
+    "cleanup-wp": "node scripts/cleanup-wp-legacy.js",
+    "cleanup-wp:dry-run": "node scripts/cleanup-wp-legacy.js --dry-run"
   },
   "keywords": [],
   "author": "",
