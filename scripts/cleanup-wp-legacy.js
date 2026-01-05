@@ -21,23 +21,31 @@ const { glob } = require('glob');
 const REMOVAL_PATTERNS = [
   {
     name: 'Social Share Section',
-    // Matches the social share wrap section
     pattern: /<section class="main-color container-wrap social-share-wrap">[\s\S]*?<\/section>\s*(?=\n)/g,
   },
   {
     name: 'Related Articles Carousel',
-    // Matches the related articles section
     pattern: /<section class="container-wrap">\s*<div class="container">\s*<div class="related-wrap">[\s\S]*?<\/section>\s*(?=\n)/g,
   },
   {
     name: 'Pagination Navigation',
-    // Matches the pagination-sticky navigation
     pattern: /\s*<nav class="pagination-sticky[\s\S]*?<\/nav><!-- \.navigation -->\s*/g,
   },
   {
     name: 'Comments Section',
-    // Matches the comments section
     pattern: /\s*<!-- Begin Comments -->[\s\S]*?<!-- End Comments -->\s*/g,
+  },
+  {
+    name: 'Article Meta Section',
+    pattern: /\s*<div class="article-meta">[\s\S]*?<\/div><!--end article-meta-->\s*/g,
+  },
+  {
+    name: 'Go Pricing Table Styles',
+    pattern: /<style[^>]*>#go-pricing-table[\s\S]*?<\/style>/g,
+  },
+  {
+    name: 'Go Pricing Table HTML',
+    pattern: /<div id="go-pricing-table-\d+" class="go-pricing"[\s\S]*?<\/div><\/div><\/div><\/div><\/div>/g,
   },
 ];
 
