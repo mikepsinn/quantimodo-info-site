@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Landing page (index.html) colors from tjasa-quantimodo-landing-page.ai
+   The artwork in imgs/landing/ was exported from, or recolored to, that file's
+   palette. Other pages keep the original images in imgs/.
+   ========================================================================== */
+
+body {
+	background: linear-gradient(#231F20, #231F20) 0 0 / 100% 233px no-repeat,
+		#D4D1BE url(../imgs/landing/bg-lines.png);
+}
+
+.header-inner {
+	background-color: #231F20;
+	background-image: url(../imgs/landing/rainbow-bg.png);
+}
+
+#logo {
+	background-image: url(../imgs/landing/quantimodo-logo.png);
+}
+
+.register,
+.login,
+.social-right-links a,
+.ss-facebook,
+.ss-googlep,
+.ss-twitter {
+	background-image: url(../imgs/landing/quantimodo-buttons.png);
+}
+
+/* Sign up is orange in the .ai; hovering shows the white version */
+.register {
+	background-position: 53px 147px;
+}
+
+.register:hover {
+	background-position: -1px 147px;
+}
+
+.login-box input:not([type="checkbox"]) {
+	background-color: #E2DFD5;
+}
+
+/* ==========================================================================
+   Headline frame
+   ========================================================================== */
+#main-wrap .inner {
+	background-color: #C9C5B4;
+}
+
+.quantimodo-info {
+	background: #E2DFD5;
+}
+
+.quantimodo-info h3 {
+	color: #231F20;
+	background-color: #F3F2ED;
+}
+
+.quantimodo-info h5 {
+	color: #231F20;
+	background-color: #E2DFD5;
+}
+
+.lt-rainbow-corner,
+.rt-rainbow-corner {
+	background-image: url(../imgs/landing/corner-rainbow.png);
+}
+
+.banner {
+	background-image: url(../imgs/landing/data-city.png);
+}
+
+.frame_overlay {
+	background-image: url(../imgs/landing/trapezoid-container.png);
+}
+
+/* ==========================================================================
+   Infographic
+   ========================================================================== */
+#main-info {
+	background-image: url(../imgs/landing/content.png);
+}
+
+.optimize-button {
+	background-image: url(../imgs/landing/btn-perfect-your-life.png);
+}
+
+.learn-more-left,
+.learn-more-center,
+.learn-more-right {
+	background-image: url(../imgs/landing/learn-more-btns.png);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+	color: #231F20;
+	background: #AAAF37;
+}
+
+.social-sharing {
+	background-image: url(../imgs/landing/social-sharing.png);
+}
+
+.rainbow-footer {
+	background-image: url(../imgs/landing/rainbow-bg-footer.png);
+}

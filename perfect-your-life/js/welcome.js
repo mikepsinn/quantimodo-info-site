@@ -81,6 +81,7 @@ $(document).ready(function () {
     startBlinking();
 
     // Turn on the mouse-hovering thought bubbles for the Giant Heads
+    // (click and unfocus let a tap open and close them on touchscreens)
     $('.bubble-text').each(function () {
         $(this).qtip({
             content: $(this).attr('data-content'),
@@ -92,8 +93,12 @@ $(document).ready(function () {
                 /*adjust: { y: -150 }*//*,
                 container: $("#main-info")*/
             },
+            show: { event: 'mouseenter click' },
+            hide: { event: 'mouseleave unfocus' },
             style: 'bigbooble'
         });
+    }).click(function (e) {
+        e.preventDefault(); // their href="#" would jump to the top of the page
     });
 
     // Set up the login and register buttons

@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Responsive layout for the landing page (index.html)
+   970px and wider keeps the original fixed layout. Below that the header,
+   headline frame and footer become fluid, and the S-V-A infographic (one
+   848px image) is shown as four crops of content.png that wrap and stack.
+   ========================================================================== */
+
+/* The page used to render in quirks mode (no doctype). These rules reproduce
+   how quirks mode sized the header's login form, so the desktop layout
+   doesn't shift: border-box inputs, and no extra line height on input lines. */
+input:not([type="image" i]),
+textarea {
+	box-sizing: border-box;
+}
+
+.login-box {
+	line-height: 22px;
+}
+
+.login-box span {
+	line-height: 1.4;
+}
+
+.login-box input {
+	vertical-align: top;
+}
+
+/* On desktop these wrappers generate no box, so the links inside them stay
+   positioned against #main-info as before */
+.info-hub,
+.info-panels,
+.info-panel {
+	display: contents;
+}
+
+@media (max-width: 969px) {
+	body {
+		background: #D4D1BE url(../imgs/landing/bg-lines.png);
+	}
+
+	.main-container {
+		width: auto;
+	}
+
+	/* ==========================================================================
+	   Header: logo, a single sign-up button, and a short rainbow into the frame
+	   ========================================================================== */
+	header {
+		background: #231F20;
+	}
+
+	.header-inner {
+		background: none;
+	}
+
+	.header-inner:after {
+		display: block;
+		height: 34px;
+		background: url(../imgs/landing/rainbow-bg.png) center top repeat-y;
+	}
+
+	#logo.landing {
+		left: 0;
+		margin: 12px;
+	}
+
+	.invitation {
+		width: auto;
+		margin-right: 12px;
+		padding-top: 14px;
+	}
+
+	#land_login,
+	.login-box {
+		min-height: 0;
+		margin: 0;
+	}
+
+	.login-box input,
+	.login-box br,
+	.login-box span,
+	.login-box .login,
+	.social-right-links,
+	#navigation {
+		display: none;
+	}
+
+	.register {
+		top: 0;
+		left: 0;
+	}
+
+	/* ==========================================================================
+	   Headline frame: trapezoid-container.png can't shrink, so draw it in CSS
+	   ========================================================================== */
+	#main-wrap {
+		box-sizing: border-box;
+		width: auto;
+		max-width: 674px;
+		padding: 0 12px;
+	}
+
+	#main-wrap .inner {
+		position: relative;
+		overflow: hidden;
+		border: 12px solid #AAAF37;
+		border-radius: 42px;
+		box-shadow: 0 0 0 1px #231F20;
+	}
+
+	#main-wrap .inner:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		border-radius: 30px;
+		box-shadow: inset 0 0 0 1px #231F20;
+		pointer-events: none;
+	}
+
+	.frame_overlay {
+		display: none;
+	}
+
+	.lt-rainbow-corner,
+	.rt-rainbow-corner {
+		width: 32px;
+		height: 43px;
+		background-size: 60px 60px;
+	}
+
+	.lt-rainbow-corner {
+		background-position: -28px -18px;
+	}
+
+	.rt-rainbow-corner {
+		background-position: 0 -18px;
+	}
+
+	.quantimodo-info h3 {
+		padding: 6px 34px 4px;
+		font-size: 18px;
+		line-height: 24px;
+		text-wrap: balance;
+	}
+
+	.quantimodo-info h5 {
+		padding: 10px 12px 15px;
+	}
+
+	.banner {
+		height: 220px;
+		border-radius: 0;
+	}
+
+	/* ==========================================================================
+	   Infographic: the hub, then the three panels in as many columns as fit
+	   ========================================================================== */
+	#main-info {
+		width: auto;
+		height: auto;
+		margin: -116px 12px 0;
+		background: none;
+	}
+
+	.info-hub,
+	.info-panel {
+		display: block;
+		position: relative;
+		background: url(../imgs/landing/content.png) no-repeat;
+	}
+
+	.info-hub {
+		width: 270px;
+		height: 262px;
+		margin: 0 auto;
+		background-position: -290px 0;
+	}
+
+	.info-panels {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 32px 16px;
+		margin-top: 20px;
+	}
+
+	.info-panel.synergizer {
+		width: 281px;
+		height: 479px;
+		background-position: 0 -143px;
+	}
+
+	.info-panel.visualizer {
+		width: 272px;
+		height: 491px;
+		background-position: -288px -258px;
+	}
+
+	.info-panel.analyzer {
+		width: 281px;
+		height: 478px;
+		background-position: -567px -143px;
+	}
+
+	/* The desktop positions, shifted by each crop's offset into content.png */
+	.optimize-button {
+		left: 68px;
+		top: 27px;
+	}
+
+	.bubble-text {
+		left: 25px;
+		top: 25px;
+	}
+
+	.bubble-text.second {
+		left: 21px;
+		top: 34px;
+	}
+
+	.bubble-text.third {
+		left: 26px;
+		right: auto;
+		top: 26px;
+	}
+
+	.learn-more-left {
+		left: 105px;
+		top: 392px;
+	}
+
+	.learn-more-center {
+		left: 106px;
+		top: 404px;
+	}
+
+	.learn-more-right {
+		left: 118px;
+		top: 391px;
+	}
+
+	/* ==========================================================================
+	   Footer
+	   ========================================================================== */
+	footer {
+		min-width: 0;
+	}
+
+	footer > div:first-child {
+		padding: 0 16px;
+	}
+
+	.buttons {
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+	.terms,
+	.terms:hover {
+		right: auto;
+	}
+
+	.cityscape {
+		left: 0;
+		width: auto;
+		max-width: 783px;
+		background-position: calc(50% + 10px) 0;
+	}
+}
+
+@media (max-width: 479px) {
+	/* The headline's desktop line break no longer fits, so let it wrap freely */
+	.quantimodo-info h3 br {
+		display: none;
+	}
+}

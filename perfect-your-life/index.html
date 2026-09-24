@@ -1,7 +1,10 @@
-﻿<head>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <title>Perfect Your Life - QuantiModo</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Track your health data to discover what factors most impact your wellbeing. Personalized insights from your own data.">
 
     <!-- Social Shares -->
@@ -19,6 +22,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/landing-colors.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- fav icons -->
     <link rel="shortcut icon" href="imgs/favicon.png">
@@ -131,21 +136,32 @@
                 </div>
             </article>
             <article id="main-info">
-                <a href="#" class="bubble-text first" data-content="<h3>Abolish War</h3>"></a>
-                <a href="#" class="bubble-text second" data-content="<h3>Abolish Politics</h3>"></a>
-                <a href="#" class="bubble-text third" data-content="<h3>Abolish Suffering</h3>"></a>
-                <a href="https://warondisease.org?source_ref=quantimodo"
-                    class="optimize-button first image-replacement">Perfect Your
-                    Life</a>
-                <a title="Comparison Matrix of QS Apps and Devices"
-                    href="https://docs.google.com/spreadsheet/ccc?key=0Al9I0-W3z0hpdDVCQkx4V1NBZmJINFVDZzdaLVdYSGc&amp;usp=sharing"
-                    class="learn-more-left image-replacement" data-content="testing">Learn More</a>
-                <a title="The Empirical Deficit that Plagues Modern Psychiatry"
-                    href="https://warondisease.org?source_ref=quantimodo"
-                    class="learn-more-center image-replacement">Learn More</a>
-                <a title="Identifying Correlations Between Input Behaviours and Output States on a Scatterplot"
-                    href="https://warondisease.org?source_ref=quantimodo"
-                    class="learn-more-right image-replacement">Learn More</a>
+                <!-- Layout-only wrappers: they only generate boxes below 970px (see css/responsive.css) -->
+                <div class="info-hub">
+                    <a href="https://warondisease.org?source_ref=quantimodo"
+                        class="optimize-button first image-replacement">Perfect Your
+                        Life</a>
+                </div>
+                <div class="info-panels">
+                    <div class="info-panel synergizer">
+                        <a href="#" class="bubble-text first" data-content="<h3>Abolish War</h3>"></a>
+                        <a title="Comparison Matrix of QS Apps and Devices"
+                            href="https://docs.google.com/spreadsheet/ccc?key=0Al9I0-W3z0hpdDVCQkx4V1NBZmJINFVDZzdaLVdYSGc&amp;usp=sharing"
+                            class="learn-more-left image-replacement" data-content="testing">Learn More</a>
+                    </div>
+                    <div class="info-panel visualizer">
+                        <a href="#" class="bubble-text second" data-content="<h3>Abolish Politics</h3>"></a>
+                        <a title="The Empirical Deficit that Plagues Modern Psychiatry"
+                            href="https://warondisease.org?source_ref=quantimodo"
+                            class="learn-more-center image-replacement">Learn More</a>
+                    </div>
+                    <div class="info-panel analyzer">
+                        <a href="#" class="bubble-text third" data-content="<h3>Abolish Suffering</h3>"></a>
+                        <a title="Identifying Correlations Between Input Behaviours and Output States on a Scatterplot"
+                            href="https://warondisease.org?source_ref=quantimodo"
+                            class="learn-more-right image-replacement">Learn More</a>
+                    </div>
+                </div>
             </article>
         </section>
     </div>
@@ -186,14 +202,6 @@
 
     <script src="static/js/bootstrap-2.0.2.min.js"></script>
     <script type="text/javascript" src="js/welcome.js"></script>
-    <script type="text/javascript">
-        // Center horizontal scroll on page load
-        window.addEventListener('load', function() {
-            var pageWidth = 970; // Main container width
-            var viewportWidth = window.innerWidth;
-            if (viewportWidth < pageWidth) {
-                var scrollOffset = (pageWidth - viewportWidth) / 2;
-                window.scrollTo(scrollOffset, 0);
-            }
-        });
-    </script>
+</body>
+
+</html>
